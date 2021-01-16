@@ -2,6 +2,7 @@
   <v-row justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <div class="text-center">
+        <user-name :user="userName" />
         <logo />
         <vuetify-logo />
       </div>
@@ -83,11 +84,22 @@
 <script>
 import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import UserName from '~/components/UserName.vue'
 
 export default {
   components: {
     Logo,
     VuetifyLogo,
+    UserName,
+  },
+
+  data() {
+    return {
+      userName: {
+        familyName: '田中',
+        givenName: '1234',
+      },
+    }
   },
 }
 </script>
